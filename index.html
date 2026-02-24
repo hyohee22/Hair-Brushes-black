@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tangle Angel Y2K</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Anton', 'sans-serif'],
+              hero: ['Orbitron', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              silver: '#e0e0e0',
+              steel: '#a0a0a0',
+              chrome: '#ffffff',
+              'dark-bg': '#050505',
+            },
+            animation: {
+              'spin-slow': 'spin-slow 10s linear infinite',
+              marquee: 'marquee 20s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen bg-dark-bg text-white font-sans selection:bg-white selection:text-black overflow-x-hidden">
+    <div class="bg-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-dark-bg/80 backdrop-blur-md">
+      <div class="flex justify-between items-center px-6 py-4">
+        <div class="font-display text-2xl tracking-tighter uppercase">
+          Tangle<span class="text-gray-400">Angel</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-mono text-xs uppercase tracking-widest">
+          <a href="#" class="hover:text-gray-300 transition-colors">[Products]</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">[Technology]</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">[About]</a>
+        </div>
+        <button class="border border-white/20 px-4 py-1 font-mono text-xs uppercase hover:bg-white hover:text-black transition-all">
+          Shop Now
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center pt-20 border-b border-white/10 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-cover bg-center pointer-events-none"
+        style="background-image: url('images/image 46.png');"
+      ></div>
+      <div class="absolute inset-0 bg-black/65 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+      
+      <!-- New Metallic Aura Effect -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <!-- Rotating Outer Ring -->
+        <div class="w-[1000px] h-[1000px] bg-metal-conic rounded-full blur-3xl opacity-20 animate-spin-slow"></div>
+        <!-- Counter-Rotating Inner Ring -->
+        <div class="absolute w-[600px] h-[600px] bg-metal-conic rounded-full blur-2xl opacity-30 animate-spin-slow-reverse"></div>
+        <!-- Central Glow -->
+        <div class="absolute w-[400px] h-[400px] bg-metal-radial rounded-full blur-xl opacity-50 mix-blend-overlay"></div>
+      </div>
+
+      <div class="z-10 text-center relative">
+        <div class="font-mono text-xs md:text-sm text-gray-400 mb-4 tracking-[0.5em] uppercase">
+          Future of Detangling
+        </div>
+        <h1 class="font-hero text-[15vw] leading-[0.8] tracking-tighter uppercase text-chrome-liquid glitch-wrapper opacity-90" data-text="TANGLE&#10;ANGEL">
+          TANGLE<br/>ANGEL
+        </h1>
+        <p class="mt-8 max-w-md mx-auto font-mono text-xs md:text-sm text-gray-400 leading-relaxed uppercase">
+          The fragility of a material that changes colors — like a beetle's shell, or an opal stone — lies in the fact that it can become something that looks totally unique depending on the angle it is being viewed from.
+        </p>
+      </div>
+
+      <div class="absolute bottom-10 left-6 font-mono text-[10px] text-gray-500 flex flex-col gap-1">
+        <span>COORD: 34.0522° N, 118.2437° W</span>
+        <span>SYS: ONLINE</span>
+        <span>VER: 2.0.24</span>
+      </div>
+
+      <div class="absolute bottom-10 right-6 animate-bounce">
+        <i data-lucide="arrow-down" class="w-6 h-6 text-white"></i>
+      </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <div class="border-b border-white/10 bg-white text-black overflow-hidden py-3">
+      <div class="flex whitespace-nowrap animate-marquee">
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+        <span class="font-display text-4xl mx-8 uppercase">Anti-Static • Heat Resistant • Antibacterial • Waterproof •</span>
+      </div>
+    </div>
+
+    <!-- Grid Content Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-b border-white/10">
+      <!-- Cell 1 -->
+      <div class="border-r border-b border-white/10 p-8 min-h-[300px] flex flex-col justify-between group hover:bg-white/5 transition-colors">
+        <div class="flex justify-between items-start">
+          <i data-lucide="star" class="w-6 h-6 text-gray-300"></i>
+          <span class="font-mono text-xs text-gray-500">01</span>
+        </div>
+        <div>
+          <h3 class="font-display text-4xl uppercase mb-2">Memory<br/>Flex™</h3>
+          <p class="font-mono text-xs text-gray-400">
+            Bristles return to their original position after use.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cell 2 - Image -->
+      <div class="border-r border-b border-white/10 min-h-[300px] relative overflow-hidden group">
+        <img 
+          src="images/image 51.png" 
+          alt="Texture" 
+          class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6">
+          <span class="bg-white text-black font-mono text-xs px-2 py-1 uppercase">
+            Texture Analysis
+          </span>
+        </div>
+      </div>
+
+      <!-- Cell 3 -->
+      <div class="border-r border-b border-white/10 p-8 min-h-[300px] flex flex-col justify-between group hover:bg-white/5 transition-colors">
+        <div class="flex justify-between items-start">
+          <i data-lucide="zap" class="w-6 h-6 text-gray-300"></i>
+          <span class="font-mono text-xs text-gray-500">02</span>
+        </div>
+        <div>
+          <h3 class="font-display text-4xl uppercase mb-2">Ex-Static™<br/>Strip</h3>
+          <p class="font-mono text-xs text-gray-400">
+            Reduces flyaway hair and static electricity.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cell 4 - Image -->
+      <div class="border-b border-white/10 min-h-[300px] relative overflow-hidden group">
+         <img 
+          src="images/img11.jpg" 
+          alt="Metal" 
+          class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
+        />
+         <div class="absolute inset-0 bg-white/10 mix-blend-overlay"></div>
+         <div class="absolute top-6 right-6">
+          <i data-lucide="maximize-2" class="w-5 h-5 text-white"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Big Typography Section -->
+    <section class="py-24 px-6 border-b border-white/10 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-display text-[5rem] md:text-[8rem] leading-[0.85] uppercase text-silver-metal mb-8">
+              Angel<br/>
+              <span class="text-silver-metal">Reborn</span>
+            </h2>
+            <div class="flex items-center gap-4">
+              <div class="h-px w-20 bg-gray-400"></div>
+              <p class="font-mono text-sm uppercase tracking-widest text-gray-400">
+                Professional Detangling
+              </p>
+            </div>
+          </div>
+          <div class="font-mono text-sm md:text-base text-gray-400 space-y-6">
+            <p>
+              DESIGNED FOR HEAVEN, BUILT FOR HELL. THE NEW TANGLE ANGEL 2.0 IS NOT JUST A BRUSH; IT IS A STATEMENT OF INTENT.
+            </p>
+            <p>
+              WITH IMPROVED ERGONOMICS AND A RUBBERISED BASE FOR STABILITY, IT STANDS TALL IN THE FACE OF KNOTS.
+            </p>
+            <button class="mt-8 group flex items-center gap-2 border border-white px-6 py-3 hover:bg-white hover:text-black transition-all uppercase text-xs tracking-widest">
+              Explore Collection
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brush Spotlight Section -->
+    <section class="border-b border-white/10 bg-[#0f0e0c] relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_12%_15%,rgba(255,255,255,0.08),transparent_36%)] pointer-events-none"></div>
+      <div class="relative z-10 w-full px-6 md:px-10 lg:px-14 py-16 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-9">
+            <p class="font-display text-5xl md:text-7xl uppercase leading-[0.88] text-white">
+              Brush Experience
+            </p>
+          </div>
+          <div class="lg:col-span-3 border border-white/15 p-4 md:p-5 bg-black/60">
+            <div class="relative overflow-hidden aspect-[4/5] mb-4">
+              <!-- Replace this image with your brush thumbnail -->
+              <img
+                src="images/img10.jpg"
+                alt="Tangle Angel brush thumbnail"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+            <ul class="font-mono text-[10px] uppercase tracking-[0.22em] text-gray-400 space-y-2">
+              <li>Wet Styling</li>
+              <li>Daily Grooming</li>
+              <li>Salon Ready</li>
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase (Simulated 3D/Tech view) -->
+    <section class="min-h-screen flex flex-col border-b border-white/10">
+      <div class="flex-1 grid grid-cols-1 md:grid-cols-2">
+        <div class="border-r border-white/10 relative bg-white/5 overflow-hidden min-h-[56vh] md:min-h-0">
+           <div class="absolute top-4 left-4 z-20 font-mono text-[10px] text-gray-300 tracking-[0.25em] uppercase">
+             FIG 1.1 - ERGONOMICS
+           </div>
+           <div class="absolute top-4 right-4 z-20 font-mono text-[10px] text-gray-300 tracking-[0.25em] uppercase">
+             Tangle Angel brush
+           </div>
+           <div class="absolute inset-y-0 right-2 z-20 flex items-center pointer-events-none">
+             <span class="font-display text-[4rem] md:text-[7rem] leading-none tracking-tight uppercase text-white/10 [writing-mode:vertical-rl] [text-orientation:mixed]">
+               Ergonomics
+             </span>
+           </div>
+           <div class="absolute bottom-4 left-4 right-4 z-20 overflow-hidden pointer-events-none">
+             <p class="font-mono text-[10px] text-white/40 tracking-[0.25em] uppercase whitespace-nowrap">
+               FIG 1.1 - ERGONOMICS  /  TANGLE ANGEL BRUSH  /  FIG 1.1 - ERGONOMICS  /  TANGLE ANGEL BRUSH
+             </p>
+           </div>
+           <div class="absolute inset-0">
+              <img
+                src="images/image 45.png"
+                alt="Tangle Angel brush"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-white/10"></div>
+           </div>
+        </div>
+        <div class="p-12 flex flex-col justify-center">
+          <div class="space-y-12">
+            <div class="group cursor-pointer">
+              <h4 class="font-mono text-xs text-gray-400 mb-2 uppercase tracking-widest">01. Antibacterial</h4>
+              <p class="font-display text-3xl uppercase text-white group-hover:text-chrome transition-colors">
+                Specially developed antibacterial additives embedded in the plastic.
+              </p>
+            </div>
+            <div class="group cursor-pointer">
+              <h4 class="font-mono text-xs text-gray-400 mb-2 uppercase tracking-widest">02. Heat Resistant</h4>
+              <p class="font-display text-3xl uppercase text-white group-hover:text-chrome transition-colors">
+                Resistant up to 120°C, perfect for blow-drying.
+              </p>
+            </div>
+            <div class="group cursor-pointer">
+              <h4 class="font-mono text-xs text-gray-500 mb-2 uppercase tracking-widest">03. Water Resistant</h4>
+              <p class="font-display text-3xl uppercase text-white group-hover:text-chrome transition-colors">
+                Ideal for use in the shower, by the pool or at the beach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Mosaic Section -->
+    <section class="border-b border-white/10 bg-black text-white py-24">
+      <div class="w-full">
+        
+        <!-- Header Info -->
+        <div class="flex justify-between items-end mb-12 border-b border-white/10 pb-4 px-6">
+          <h2 class="font-display text-[12vw] leading-[0.8] uppercase">Results</h2>
+          <div class="hidden md:flex gap-12 font-mono text-xs text-gray-400 uppercase tracking-widest mb-4">
+            <span>/ PRO SERIES</span>
+            <span>2026</span>
+            <span>/ DESIGN</span>
+          </div>
+        </div>
+
+        <!-- Mosaic Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 auto-rows-[140px] md:auto-rows-[170px] lg:auto-rows-[190px] gap-0">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 md:row-span-2 bg-white border border-white/20 p-5 relative overflow-hidden group">
+            <span class="text-black font-mono text-[10px] uppercase tracking-widest rotate-[-90deg] origin-bottom-left translate-x-3 absolute bottom-5 left-5">FIG 2.0</span>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+          </div>
+
+          <div class="col-span-1 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-2 border border-white/10 p-5 flex flex-col justify-between hover:bg-white/5 transition-colors">
+            <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed">
+              Tangle Angel has become more competitive in the professional market, attracting the attention of new stylists.
+            </p>
+            <span class="font-mono text-xs text-gray-500">01</span>
+          </div>
+
+          <div class="col-span-2 md:col-span-6 lg:col-span-6 row-span-2 relative overflow-hidden border border-white/10 group">
+            <img src="images/image 70.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-70"></div>
+          </div>
+
+          <div class="col-span-2 md:col-span-3 lg:col-span-3 row-span-1 border border-white/10 p-5 flex flex-col justify-between bg-white/5 hover:bg-white/10 transition-colors">
+            <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed">
+              Customers have become more loyal to the brand, getting a pleasant detangling experience.
+            </p>
+            <span class="font-mono text-xs text-gray-500">02</span>
+          </div>
+
+          <div class="hidden col-span-1 md:col-span-1 lg:col-span-2 row-span-1 bg-white border border-white/20 p-5 relative group overflow-hidden flex items-center justify-center">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+            <i data-lucide="arrow-up-right" class="w-7 h-7 text-black group-hover:rotate-45 transition-transform duration-300"></i>
+          </div>
+
+          <div class="hidden col-span-1 md:col-span-2 lg:col-span-2 row-span-1 bg-white border border-white/20 p-5 relative group">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+          </div>
+
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden border border-white/10 group">
+            <img src="images/image 77.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700">
+          </div>
+
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden border border-white/10 group">
+            <img src="images/image 65.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700">
+          </div>
+
+          <div class="col-span-2 md:col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden border border-white/10 group">
+            <img src="images/image 75.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700">
+          </div>
+
+          <div class="col-span-2 md:col-span-4 lg:col-span-4 row-span-1 border border-white/10 p-5 flex items-end hover:bg-white/5 transition-colors">
+            <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed md:text-right w-full">
+              The new design has become an effective tool for brand promotion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6 border-t border-white/10">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-2">
+          <h2 class="font-display text-6xl uppercase mb-4">Tangle<br/>Angel</h2>
+          <p class="font-mono text-xs text-gray-500 max-w-xs">
+            © 2026 TANGLE ANGEL LTD.<br/>
+            ALL RIGHTS RESERVED.<br/>
+            DESIGNED IN THE UK.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-mono text-xs text-white mb-4 uppercase border-b border-white/20 pb-2 inline-block">Social</h4>
+          <ul class="space-y-2 font-mono text-xs text-gray-400">
+            <li><a href="#" class="hover:text-white">INSTAGRAM</a></li>
+            <li><a href="#" class="hover:text-white">TIKTOK</a></li>
+            <li><a href="#" class="hover:text-white">FACEBOOK</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-mono text-xs text-white mb-4 uppercase border-b border-white/20 pb-2 inline-block">Legal</h4>
+          <ul class="space-y-2 font-mono text-xs text-gray-400">
+            <li><a href="#" class="hover:text-white">PRIVACY POLICY</a></li>
+            <li><a href="#" class="hover:text-white">TERMS OF SERVICE</a></li>
+            <li><a href="#" class="hover:text-white">SHIPPING INFO</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-20 pt-8 border-t border-white/10 flex justify-between items-end">
+         <i data-lucide="globe" class="w-6 h-6 text-gray-600 animate-spin-slow"></i>
+         <span class="font-display text-[10vw] leading-none text-white/5 select-none pointer-events-none">
+           ANGEL
+         </span>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

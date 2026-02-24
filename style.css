@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@600;700;800&display=swap');
+
+:root {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-silver: #e0e0e0;
+  --color-steel: #a0a0a0;
+  --color-chrome: #ffffff;
+  --color-dark-bg: #050505;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: white;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+::selection {
+  background-color: white;
+  color: black;
+}
+
+/* Utilities */
+.text-chrome {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e0e0e0 40%,
+    #a0a0a0 50%,
+    #404040 51%,
+    #808080 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+}
+
+.text-silver-metal {
+  background: linear-gradient(
+    180deg,
+    #f5f7fa 0%,
+    #cfd6dd 28%,
+    #8a939d 50%,
+    #59616b 52%,
+    #c7ced6 74%,
+    #eef2f6 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 12px rgba(170, 180, 190, 0.22);
+}
+
+.text-chrome-liquid {
+  background: linear-gradient(
+    180deg, 
+    #fff 0%, 
+    #e0e0e0 40%, 
+    #a0a0a0 50%, 
+    #404040 55%, 
+    #fff 100%
+  );
+  background-size: 100% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: liquid-shine 4s infinite linear;
+}
+
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Animations */
+@keyframes liquid-shine {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+/* Dual Upward Shine Effect */
+.glitch-wrapper {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.glitch-wrapper::before,
+.glitch-wrapper::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  white-space: pre;
+  pointer-events: none;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.glitch-wrapper::before {
+  background-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 45%,
+    rgba(255, 255, 255, 0.9) 62%,
+    rgba(255, 255, 255, 0.08) 78%,
+    transparent 100%
+  );
+  background-size: 100% 230%;
+  background-position: 0 145%;
+  animation: shine-rise-a 3.4s linear infinite;
+  opacity: 0.95;
+}
+
+.glitch-wrapper::after {
+  background-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 35%,
+    rgba(255, 255, 255, 0.75) 55%,
+    rgba(255, 255, 255, 0.05) 70%,
+    transparent 100%
+  );
+  background-size: 100% 260%;
+  background-position: 0 155%;
+  animation: shine-rise-b 5.1s linear infinite 0.85s;
+  opacity: 0.7;
+}
+
+@keyframes shine-rise-a {
+  0% { background-position: 0 145%; }
+  100% { background-position: 0 -95%; }
+}
+
+@keyframes shine-rise-b {
+  0% { background-position: 0 155%; }
+  100% { background-position: 0 -105%; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Noise Overlay */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Metallic Gradients for Hero */
+.bg-metal-conic {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255, 255, 255, 0.05) 45deg,
+    rgba(255, 255, 255, 0.4) 90deg,
+    rgba(255, 255, 255, 0.05) 135deg,
+    transparent 180deg,
+    rgba(255, 255, 255, 0.05) 225deg,
+    rgba(255, 255, 255, 0.4) 270deg,
+    rgba(255, 255, 255, 0.05) 315deg,
+    transparent 360deg
+  );
+}
+
+.bg-metal-radial {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(160, 160, 160, 0.05) 40%,
+    transparent 70%
+  );
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-reverse 20s linear infinite;
+}
+
+/* Cursor */
+a, button {
+  cursor: pointer;
+}

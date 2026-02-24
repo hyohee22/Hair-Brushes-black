@@ -211,13 +211,20 @@
     <section class="border-b border-white/10 bg-[#0f0e0c] relative overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_12%_15%,rgba(255,255,255,0.08),transparent_36%)] pointer-events-none"></div>
       <div class="relative z-10 w-full px-6 md:px-10 lg:px-14 py-16 md:py-20">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
-          <div class="lg:col-span-9">
-            <p class="font-display text-5xl md:text-7xl uppercase leading-[0.88] text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:items-end">
+          <div class="lg:col-span-9 lg:flex lg:flex-col lg:h-full mt-2 md:mt-3">
+            <p class="font-display text-5xl md:text-7xl uppercase leading-[0.88] text-[#d7d0c3]">
               Brush Experience
             </p>
+            <p class="mt-5 font-mono text-[11px] md:text-xs uppercase tracking-[0.18em] text-gray-400 leading-relaxed max-w-3xl">
+              Designed for daily detangling without harsh pulling.<br/>
+              Flexible bristles move with the hair to reduce stress and breakage.<br/>
+              The balanced grip keeps each stroke light, stable, and precise.<br/>
+              From wet styling to dry finishing, performance stays consistent.<br/>
+              One brush built for comfort, control, and cleaner results.
+            </p>
           </div>
-          <div class="lg:col-span-3 border border-white/15 p-4 md:p-5 bg-black/60">
+          <div class="lg:col-span-3 border border-white/15 p-4 md:p-5 bg-black/30">
             <div class="relative overflow-hidden aspect-[4/5] mb-4">
               <!-- Replace this image with your brush thumbnail -->
               <img
@@ -225,7 +232,7 @@
                 alt="Tangle Angel brush thumbnail"
                 class="absolute inset-0 w-full h-full object-cover"
               />
-              <div class="absolute inset-0 bg-black/30"></div>
+              <div class="absolute inset-0 bg-black/45"></div>
             </div>
             <ul class="font-mono text-[10px] uppercase tracking-[0.22em] text-gray-400 space-y-2">
               <li>Wet Styling</li>
@@ -243,15 +250,15 @@
     <!-- Product Showcase (Simulated 3D/Tech view) -->
     <section class="min-h-screen flex flex-col border-b border-white/10">
       <div class="flex-1 grid grid-cols-1 md:grid-cols-2">
-        <div class="border-r border-white/10 relative bg-white/5 overflow-hidden min-h-[56vh] md:min-h-0">
+        <div class="border-r border-white/10 relative bg-white/5 overflow-hidden">
            <div class="absolute top-4 left-4 z-20 font-mono text-[10px] text-gray-300 tracking-[0.25em] uppercase">
              FIG 1.1 - ERGONOMICS
            </div>
            <div class="absolute top-4 right-4 z-20 font-mono text-[10px] text-gray-300 tracking-[0.25em] uppercase">
              Tangle Angel brush
            </div>
-           <div class="absolute inset-y-0 right-2 z-20 flex items-center pointer-events-none">
-             <span class="font-display text-[4rem] md:text-[7rem] leading-none tracking-tight uppercase text-white/10 [writing-mode:vertical-rl] [text-orientation:mixed]">
+           <div class="absolute inset-y-0 right-2 z-20 hidden md:flex items-center pointer-events-none">
+             <span class="font-display text-[7rem] leading-none tracking-tight uppercase text-white/10 [writing-mode:vertical-rl] [text-orientation:mixed]">
                Ergonomics
              </span>
            </div>
@@ -309,57 +316,71 @@
         </div>
 
         <!-- Mosaic Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 auto-rows-[140px] md:auto-rows-[170px] lg:auto-rows-[190px] gap-0">
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 md:row-span-2 bg-white border border-white/20 p-5 relative overflow-hidden group">
-            <span class="text-black font-mono text-[10px] uppercase tracking-widest rotate-[-90deg] origin-bottom-left translate-x-3 absolute bottom-5 left-5">FIG 2.0</span>
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-0 border-t border-white/10">
+          
+          <!-- Row 1 -->
+          <!-- 1. White Block -->
+          <div class="aspect-square bg-white border-r border-b border-white/10 p-6 flex items-end relative overflow-hidden group">
+             <span class="text-black font-mono text-xs rotate-[-90deg] origin-bottom-left translate-x-4 absolute bottom-6 left-6">FIG 2.0</span>
+             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
           </div>
 
-          <div class="col-span-1 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-2 border border-white/10 p-5 flex flex-col justify-between hover:bg-white/5 transition-colors">
+          <!-- 2. Text Block -->
+          <div class="aspect-square border-r border-b border-white/10 p-6 flex flex-col justify-between hover:bg-white/5 transition-colors">
             <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed">
               Tangle Angel has become more competitive in the professional market, attracting the attention of new stylists.
             </p>
             <span class="font-mono text-xs text-gray-500">01</span>
           </div>
 
-          <div class="col-span-2 md:col-span-6 lg:col-span-6 row-span-2 relative overflow-hidden border border-white/10 group">
-            <img src="images/image 70.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-70"></div>
+          <!-- 3. Image -->
+          <div class="aspect-square border-r border-b border-white/10 relative overflow-hidden group">
+             <img src="images/image 75.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
+             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
 
-          <div class="col-span-2 md:col-span-3 lg:col-span-3 row-span-1 border border-white/10 p-5 flex flex-col justify-between bg-white/5 hover:bg-white/10 transition-colors">
-            <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed">
+          <!-- 4. Text Block -->
+          <div class="aspect-square border-r border-b border-white/10 p-6 flex flex-col justify-between bg-white/5 hover:bg-white/10 transition-colors">
+             <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed">
               Customers have become more loyal to the brand, getting a pleasant detangling experience.
             </p>
             <span class="font-mono text-xs text-gray-500">02</span>
           </div>
 
-          <div class="hidden col-span-1 md:col-span-1 lg:col-span-2 row-span-1 bg-white border border-white/20 p-5 relative group overflow-hidden flex items-center justify-center">
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-            <i data-lucide="arrow-up-right" class="w-7 h-7 text-black group-hover:rotate-45 transition-transform duration-300"></i>
+           <!-- 5. White Block -->
+          <div class="hidden aspect-square bg-white border-r border-b border-white/10 p-6 relative group overflow-hidden flex items-center justify-center">
+             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+             <i data-lucide="arrow-up-right" class="w-8 h-8 text-black group-hover:rotate-45 transition-transform duration-300"></i>
           </div>
 
-          <div class="hidden col-span-1 md:col-span-2 lg:col-span-2 row-span-1 bg-white border border-white/20 p-5 relative group">
+          <!-- Row 2 -->
+          <!-- 6. White Block -->
+          <div class="hidden aspect-square bg-white border-r border-b border-white/10 p-6 relative group">
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
           </div>
 
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden border border-white/10 group">
-            <img src="images/image 77.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700">
+          <!-- 7. Image -->
+          <div class="aspect-square border-r border-b border-white/10 relative overflow-hidden group">
+             <img src="images/image 699.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
           </div>
 
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden border border-white/10 group">
-            <img src="images/image 65.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700">
+          <!-- 8. Image -->
+          <div class="aspect-square border-r border-b border-white/10 relative overflow-hidden group">
+             <img src="images/image 65.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
           </div>
 
-          <div class="col-span-2 md:col-span-2 lg:col-span-2 row-span-1 relative overflow-hidden border border-white/10 group">
-            <img src="images/image 75.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700">
+          <!-- 9. Image -->
+          <div class="aspect-square border-r border-b border-white/10 relative overflow-hidden group">
+             <img src="images/image 77.png" alt="Model" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
           </div>
 
-          <div class="col-span-2 md:col-span-4 lg:col-span-4 row-span-1 border border-white/10 p-5 flex items-end hover:bg-white/5 transition-colors">
-            <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed md:text-right w-full">
+          <!-- 10. Text Block -->
+          <div class="aspect-square border-r border-b border-white/10 p-6 flex flex-col justify-end hover:bg-white/5 transition-colors">
+             <p class="font-mono text-[10px] text-gray-400 uppercase leading-relaxed text-right">
               The new design has become an effective tool for brand promotion.
             </p>
           </div>
+
         </div>
       </div>
     </section>
